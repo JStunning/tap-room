@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './Header';
 import KegControl from './KegControl/KegControl';
+import DailyKegControl from './DailyKeg/DailyKegControl';
 
 
 const masterKegList = [
@@ -48,8 +49,13 @@ class App extends React.Component {
         <div id="Header">
           <Header />
         </div>
-        <div id="KegControl">
-          <KegControl masterKegList={this.state.masterKegList} />
+        <div id="container">
+          <div id="KegControl">
+            <KegControl masterKegList={this.state.masterKegList} />
+          </div>
+          <div id="DailyKeg">
+            <DailyKegControl masterKegList={this.state.masterKegList} />
+          </div>
         </div>
       </React.Fragment>
     )
