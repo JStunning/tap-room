@@ -9,7 +9,7 @@ function Keg(props) {
       <p>Price: {props.masterKegList.price}</p>
       <p>Alc/Vol: {props.masterKegList.alcohol}%</p>
       <p>Flavor: {props.masterKegList.flavor}</p>
-      <p>{props.masterKegList.id}</p>
+      <p>{props.masterKegList.id}</p><br />
       <img id="kegImage" src="https://specsonline.com/wp-content/uploads/reload/007289000141.jpg" alt="keg" /><br />
     </React.Fragment>
   );

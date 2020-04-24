@@ -9,7 +9,12 @@ p {
 }
 
 button {
-  margin-top: 1em;
+  margin: 1em 0;
+}
+
+img {
+  margin: 0;
+  padding: 0;
 }
 
 .App {
@@ -36,8 +41,6 @@ button {
 
 #KegControl {
   background-color: rgb(200, 150, 150);
-  padding-bottom: 2%;
-  flex: 1;
 }
 
 #DailyKeg {

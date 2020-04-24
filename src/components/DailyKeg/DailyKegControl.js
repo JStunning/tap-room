@@ -9,14 +9,16 @@ class DailyKegControl extends React.Component {
     super(props);
   }
 
+  handleChangingSelectedTicket = () => {
+
+  }
+
   render() {
 
     return (
-
       <React.Fragment>
         <DailyKeg masterKegList={this.props.masterKegList} /><br />
         <button type="button"> Details </button>
-        <DailyKegDetails masterKegList={this.props.masterKegList} /><br />
       </React.Fragment>
     );
   }

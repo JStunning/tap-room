@@ -11,15 +11,13 @@ class KegControl extends React.Component {
 
   render() {
 
-    let currentlyVisibleState = null;
-
     return (
       <React.Fragment>
           <h2>Keg Menu</h2><hr />
           {this.props.masterKegList.map((keg, i) =>
             <>
-              <Keg masterKegList={this.props.masterKegList[i]} /><br />
-              <button type="button">details</button>
+              <Keg masterKegList={this.props.masterKegList[i]} />
+              <button type="button">Details</button>
             </>
           )}
           {/* <KegDetails /> */}
