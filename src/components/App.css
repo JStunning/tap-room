@@ -3,6 +3,15 @@ body {
   padding: 0;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  margin-top: 1em;
+}
+
 .App {
   text-align: center;
 }
@@ -27,8 +36,15 @@ body {
 
 #KegControl {
   background-color: rgb(200, 150, 150);
+  padding-bottom: 2%;
+  flex: 1;
 }
 
 #DailyKeg {
   background-color: rgb(150, 150, 200);
 }
+
+#kegImage {
+  width: 300px;
+}
+

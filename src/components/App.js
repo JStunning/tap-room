@@ -15,19 +15,19 @@ const masterKegList = [
   },
 
   {
-    name: "Keg Name2",
-    brand: "Keg Brand2",
+    name: "Keg Name 2",
+    brand: "Keg Brand 2",
     price: 200,
     alcohol: 6,
-    flavor: "Beer2"
+    flavor: "Beer 2"
   },
 
   {
-    name: "Keg Name3",
-    brand: "Keg Brand3",
+    name: "Keg Name 3",
+    brand: "Keg Brand 3",
     price: 300,
     alcohol: 7,
-    flavor: "Beer3"
+    flavor: "Beer 3"
   }
 ];
 
@@ -40,9 +40,13 @@ class App extends React.Component {
       price: 100,
       alcohol: 5,
       flavor: false,
-      masterKegList: masterKegList
+      masterKegList: masterKegList,
+      menuVisibleOnPage: true,
+      selectedKeg: null
     };
   }
+
+
   render() {
     return (
       <React.Fragment>

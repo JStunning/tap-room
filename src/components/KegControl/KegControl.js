@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Keg from './Keg';
+import KegDetails from './KegDetails'
 
 class KegControl extends React.Component {
 
@@ -9,15 +10,19 @@ class KegControl extends React.Component {
   }
 
   render() {
+
+    let currentlyVisibleState = null;
+
     return (
       <React.Fragment>
-        <h2>Keg Menu</h2>
-        <hr />
-        {this.props.masterKegList.map((keg, i) =>
-          <Keg
-            masterKegList={this.props.masterKegList[i]}
-          />
-        )}
+          <h2>Keg Menu</h2><hr />
+          {this.props.masterKegList.map((keg, i) =>
+            <>
+              <Keg masterKegList={this.props.masterKegList[i]} /><br />
+              <button type="button">details</button>
+            </>
+          )}
+          {/* <KegDetails /> */}
       </React.Fragment>
     );
   }
