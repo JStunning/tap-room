@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("https://images.squarespace-cdn.com/content/v1/571e5836ab48de1a6d598e36/1464121739359-BT12TC0G6GWOG73M29LG/ke17ZwdGBToddI8pDm48kKV0nEQLrZCZyN20-sdpYlF7gQa3H78H3Y0txjaiv_0fYiipkZ87xgDekDUjSlg8vohVU6YYtSQ8H7TvSNSjCpUJf87PfuMIrVhFsgTICpaxZGjoBKy3azqku80C789l0mlM0or4nqX7jrn5yWu0hA3Qz8y0LQEFsvCavp5K6xK5MN4bOW2Qph0652cZlSdMGg/IMG_9415+%281%29.jpg?format=2500w");
 }
 
 .App {
@@ -11,17 +10,19 @@ body {
 #container {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 3px;
   text-align: center;
-  margin: 0 3%;
+  margin: 0 7%;
+  padding-top: 5.5em;
 }
 
 #Header {
   background-color: rgb(200, 150, 220);
   margin: 0;
   padding: 0;
+  position: fixed;
+  width: 100%;
   text-align: center;
-  margin: 0 3%;
 }
 
 #KegControl {
