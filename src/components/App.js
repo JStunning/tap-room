@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './Header';
-import KegControl from './KegControl/KegControl';
+import KegControl from './KegControl/KegList';
 import DailyKegControl from './DailyKeg/DailyKegControl';
 
 
@@ -52,9 +52,7 @@ class App extends React.Component {
   handleChangingSelectedKeg = (id) => {
     const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
     this.setState({
-      selectedKeg: selectedKeg,
-      formVisibleOnPage: false,
-      editing: false
+      selectedKeg: selectedKeg
     });
     //console.log("Details selected! ", id);
   }

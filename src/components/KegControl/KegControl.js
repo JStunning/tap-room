@@ -1,34 +1,37 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Keg from './Keg';
+import KegList from './KegList';
 import KegDetails from './KegDetails';
 
 class KegControl extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      masterKegList: props.masterKegList,
+      selectedKeg: selectedKeg
+    }
+    
   }
 
+
   render() {
+    let currentVisibleState = null;
+
+    if (this.props.selectedKeg != null) {
+      console.log("Details should appear!");
+      console.log("SELECTED Keg:", this.props.selectedKeg);
+      currentVisibleState = <KegDetails keg={this.props.selectedKeg} />
+    } else {
+      console.log("KegList should appear!");
+      currentVisibleState = <KegList masterKegList={this.state.masterKegList} />
+    }
 
     return (
       <React.Fragment>
-        <h2>Keg Control</h2>
-        <hr />
-        {this.props.masterKegList.map((keg, i) =>
-          <Keg
-            masterKegList={this.props.masterKegList[i]}
-            whenKegClicked={this.props.onKegSelection}
-          />
-        )}
+        {currentVisibleState}
       </React.Fragment>
     );
   }
 }
-
-KegControl.propTypes = {
-  masterKegList: PropTypes.array,
-  whenKegClicked: PropTypes.func
-};
 
 export default KegControl;
