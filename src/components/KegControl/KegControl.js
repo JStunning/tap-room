@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Keg from './Keg';
-import KegDetails from './KegDetails'
+import KegDetails from './KegDetails';
 
 class KegControl extends React.Component {
 
@@ -13,21 +13,22 @@ class KegControl extends React.Component {
 
     return (
       <React.Fragment>
-          <h2>Keg Menu</h2><hr />
-          {this.props.masterKegList.map((keg, i) =>
-            <>
-              <Keg masterKegList={this.props.masterKegList[i]} />
-              <button type="button">Details</button>
-            </>
-          )}
-          {/* <KegDetails /> */}
+        <h2>Keg Control</h2>
+        <hr />
+        {this.props.masterKegList.map((keg, i) =>
+          <Keg
+            masterKegList={this.props.masterKegList[i]}
+            whenKegClicked={this.props.onKegSelection}
+          />
+        )}
       </React.Fragment>
     );
   }
 }
 
 KegControl.propTypes = {
-  masterKegList: PropTypes.array
+  masterKegList: PropTypes.array,
+  whenKegClicked: PropTypes.func
 };
 
 export default KegControl;

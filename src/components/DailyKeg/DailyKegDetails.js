@@ -16,11 +16,11 @@ function DailyKegDetails(props) {
 }
 
 DailyKegDetails.propTypes = {
-    name: PropTypes.string,
-    brand: PropTypes.string,
-    price: PropTypes.number,
-    alcohol: PropTypes.number,
-    flavor: PropTypes.string
-  }
+  name: PropTypes.string,
+  brand: PropTypes.string,
+  price: PropTypes.number,
+  alcohol: PropTypes.number,
+  flavor: PropTypes.string
+}
 
 export default DailyKegDetails;

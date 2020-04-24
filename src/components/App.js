@@ -11,7 +11,8 @@ const masterKegList = [
     brand: "Keg Brand",
     price: 100,
     alcohol: 5,
-    flavor: "Beer"
+    flavor: "Beer",
+    id: 0
   },
 
   {
@@ -19,7 +20,8 @@ const masterKegList = [
     brand: "Keg Brand 2",
     price: 200,
     alcohol: 6,
-    flavor: "Beer 2"
+    flavor: "Beer 2",
+    id: 1
   },
 
   {
@@ -27,7 +29,8 @@ const masterKegList = [
     brand: "Keg Brand 3",
     price: 300,
     alcohol: 7,
-    flavor: "Beer 3"
+    flavor: "Beer 3",
+    id: 2
   }
 ];
 
@@ -46,6 +49,15 @@ class App extends React.Component {
     };
   }
 
+  handleChangingSelectedKeg = (id) => {
+    const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
+    this.setState({
+      selectedKeg: selectedKeg,
+      formVisibleOnPage: false,
+      editing: false
+    });
+    //console.log("Details selected! ", id);
+  }
 
   render() {
     return (
@@ -55,7 +67,7 @@ class App extends React.Component {
         </div>
         <div id="container">
           <div id="KegControl">
-            <KegControl masterKegList={this.state.masterKegList} />
+            <KegControl masterKegList={this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg} />
           </div>
           <div id="DailyKeg">
             <DailyKegControl masterKegList={this.state.masterKegList} />

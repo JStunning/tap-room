@@ -9,10 +9,6 @@ class DailyKegControl extends React.Component {
     super(props);
   }
 
-  handleChangingSelectedTicket = () => {
-
-  }
-
   render() {
 
     return (

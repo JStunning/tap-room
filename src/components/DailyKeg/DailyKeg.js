@@ -18,8 +18,8 @@ function DailyKeg(props) {
 }
 
 DailyKeg.propTypes = {
-  name: PropTypes.string.isRequired,
-  brand: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  brand: PropTypes.string,
 };
 
 export default DailyKeg;
